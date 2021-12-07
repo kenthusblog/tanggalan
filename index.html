@@ -37,31 +37,19 @@ $('#year').text(g_year);
 
 
 
-
-
-
-<div class="kalender">
+	<div id="kalender">
+		<div>
 			<div class="card">
 				<div class="card-head">
 					 <div class="no-margin">
-						<div class="col-s3">
-							<button onclick="prev_year()" class="btn-arr"><i class="material-icons">fast_rewind</i></button>
-							<button onclick="prev()" class="btn-arr"><i class="material-icons">chevron_left</i></button>
-						</div>
-						<div class="col-s6">
-							<span class="card-title"><span id="month">Desember</span> <span id="year">2021</span></span>
-						</div>
-						<div class="col-s3">
-							<button onclick="next()" class="btn-arr"><i class="material-icons">chevron_right</i></button>
-							<button onclick="next_year()" class="btn-arr"><i class="material-icons">fast_forward</i></button>
-						</div>
+						<div class="col-s3"><button onclick="prev()" class="btn-arr"><i class="material-icons">chevron_left</i></button></div>
+						<div class="col-s6"><span class="card-title"><span id='month'></span> <span id='year'></span></span></div>
+						<div class="col-s3"><button onclick="next()" class="btn-arr"><i class="material-icons">chevron_right</i></button></div>
 					</div>
 				</div>
-				<div id="setbulan">26 Rabiul akhir 1443 H - 27 Jumadil awal 1443 H</div>
-				<div class="card-content" style="overflow:auto">
-					<div id="calendar" class="calendar-java" style="display: block;">
-
-						<table class="cal_table tbl-hijr" border="1">
+					<div id="calendar" class="calendar-java">
+						<div id='setbulan'></div>
+						<table class="cal_table tbl-hijr" border='1'>
 						  <tbody>
 							<tr class="row-days">
 								<th class="day" style="color: #f44336;">Min</th>
@@ -70,75 +58,91 @@ $('#year').text(g_year);
 								<th class="day">Rab</th>
 								<th class="day">Kam</th> 
 								<th class="day" style="color: #4caf50;">Jum</th>
-								<th class="day">Sab</th>
+								<th class="day">Sab</th>  		
 							</tr>
 							<tr class="row-0">
-								<td onclick="detail(this)" class="col-0"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">1</p><p class="h-date">٢٦</p><span class="det">Masehi : 1 Desember 2021;Hijriyah : 26 Rabiul akhir 1443 H;Pasaran : Rabu Legi;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">2</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٧</p><span class="det">Masehi : 2 Desember 2021;Hijriyah : 27 Rabiul akhir 1443 H;Pasaran : Kamis Pahing;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">3</p><p class="h-date">٢٨</p><span class="det">Masehi : 3 Desember 2021;Hijriyah : 28 Rabiul akhir 1443 H;Pasaran : Jumat Pon;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">4</p><p class="h-date">٢٩</p><span class="det">Masehi : 4 Desember 2021;Hijriyah : 29 Rabiul akhir 1443 H;Pasaran : Sabtu Wage;</span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 							<tr class="row-1">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">5</p><p class="h-date">١</p><span class="det">Masehi : 5 Desember 2021;Hijriyah : 1 Jumadil awal 1443 H;Pasaran : Minggu Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">6</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢</p><span class="det">Masehi : 6 Desember 2021;Hijriyah : 2 Jumadil awal 1443 H;Pasaran : Senin Legi;</span></td>
-								<td onclick="detail(this)" class="col-2" style="background-color: rgb(187, 222, 251);"><p class="m-date">7</p><p class="h-date">٣</p><span class="det">Masehi : 7 Desember 2021;Hijriyah : 3 Jumadil awal 1443 H;Pasaran : Selasa Pahing;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">8</p><p class="h-date">٤</p><span class="det">Masehi : 8 Desember 2021;Hijriyah : 4 Jumadil awal 1443 H;Pasaran : Rabu Pon;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">9</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٥</p><span class="det">Masehi : 9 Desember 2021;Hijriyah : 5 Jumadil awal 1443 H;Pasaran : Kamis Wage;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">10</p><p class="h-date">٦</p><span class="det">Masehi : 10 Desember 2021;Hijriyah : 6 Jumadil awal 1443 H;Pasaran : Jumat Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">11</p><p class="h-date">٧</p><span class="det">Masehi : 11 Desember 2021;Hijriyah : 7 Jumadil awal 1443 H;Pasaran : Sabtu Legi;</span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 							<tr class="row-2">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">12</p><p class="h-date">٨</p><span class="det">Masehi : 12 Desember 2021;Hijriyah : 8 Jumadil awal 1443 H;Pasaran : Minggu Pahing;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">13</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٩</p><span class="det">Masehi : 13 Desember 2021;Hijriyah : 9 Jumadil awal 1443 H;Pasaran : Senin Pon;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">14</p><p class="h-date">١۰</p><span class="det">Masehi : 14 Desember 2021;Hijriyah : 10 Jumadil awal 1443 H;Pasaran : Selasa Wage;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">15</p><p class="h-date">١١</p><span class="det">Masehi : 15 Desember 2021;Hijriyah : 11 Jumadil awal 1443 H;Pasaran : Rabu Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">16</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٢</p><span class="det">Masehi : 16 Desember 2021;Hijriyah : 12 Jumadil awal 1443 H;Pasaran : Kamis Legi;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">17</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٣</p><span class="det">Masehi : 17 Desember 2021;Hijriyah : 13 Jumadil awal 1443 H;Pasaran : Jumat Pahing;Puasa Ayyamul Bidh 13 Jumadil awal 1443;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">18</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٤</p><span class="det">Masehi : 18 Desember 2021;Hijriyah : 14 Jumadil awal 1443 H;Pasaran : Sabtu Pon;Puasa Ayyamul Bidh 14 Jumadil awal 1443;</span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 							<tr class="row-3">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">19</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٥</p><span class="det">Masehi : 19 Desember 2021;Hijriyah : 15 Jumadil awal 1443 H;Pasaran : Minggu Wage;Puasa Ayyamul Bidh 15 Jumadil awal 1443;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">20</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٦</p><span class="det">Masehi : 20 Desember 2021;Hijriyah : 16 Jumadil awal 1443 H;Pasaran : Senin Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">21</p><p class="h-date">١٧</p><span class="det">Masehi : 21 Desember 2021;Hijriyah : 17 Jumadil awal 1443 H;Pasaran : Selasa Legi;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">22</p><p class="h-date">١٨</p><span class="det">Masehi : 22 Desember 2021;Hijriyah : 18 Jumadil awal 1443 H;Pasaran : Rabu Pahing;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">23</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٩</p><span class="det">Masehi : 23 Desember 2021;Hijriyah : 19 Jumadil awal 1443 H;Pasaran : Kamis Pon;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">24</p><p class="h-date">٢۰</p><span class="det">Masehi : 24 Desember 2021;Hijriyah : 20 Jumadil awal 1443 H;Pasaran : Jumat Wage;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date" style="color: rgb(244, 67, 54);">25</p><p class="h-date">٢١</p><span class="det">Masehi : 25 Desember 2021;Hijriyah : 21 Jumadil awal 1443 H;Pasaran : Sabtu Kliwon;Hari Raya Natal;</span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 							<tr class="row-4">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">26</p><p class="h-date">٢٢</p><span class="det">Masehi : 26 Desember 2021;Hijriyah : 22 Jumadil awal 1443 H;Pasaran : Minggu Legi;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">27</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٣</p><span class="det">Masehi : 27 Desember 2021;Hijriyah : 23 Jumadil awal 1443 H;Pasaran : Senin Pahing;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">28</p><p class="h-date">٢٤</p><span class="det">Masehi : 28 Desember 2021;Hijriyah : 24 Jumadil awal 1443 H;Pasaran : Selasa Pon;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">29</p><p class="h-date">٢٥</p><span class="det">Masehi : 29 Desember 2021;Hijriyah : 25 Jumadil awal 1443 H;Pasaran : Rabu Wage;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">30</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٦</p><span class="det">Masehi : 30 Desember 2021;Hijriyah : 26 Jumadil awal 1443 H;Pasaran : Kamis Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">31</p><p class="h-date">٢٧</p><span class="det">Masehi : 31 Desember 2021;Hijriyah : 27 Jumadil awal 1443 H;Pasaran : Jumat Legi;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 							<tr class="row-5">
-								<td onclick="detail(this)" class="col-0"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick='detail(this)' class="col-0"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-1"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-2"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-3"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-4"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-5"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
+								<td onclick='detail(this)' class="col-6"><p class="m-date"></p><p class="h-date"></p><span class='det'></span></td>
 							</tr>
 						  </tbody>
 						</table>
 					</div>
-				</div>
 				<div class="card-tabs">
 					Hari Libur
 				</div>
 				<div>
 					<div id="harilibur">
 						<ul class="collection">
-						<li class="collection-item"><span class="title">25 Desember : Hari Raya Natal</span><a href="#!" class="secondary-content"></a></li></ul>
+						</ul>
 					</div>
 				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 				<div class="card-tabs">
 					Indikator Warna Puasa
 				</div>
