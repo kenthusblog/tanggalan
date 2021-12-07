@@ -192,27 +192,18 @@ $('#year').text(g_year);
 
 	
 		
-	<div class="kalender">
+	<div id="kalender">
+		<div>
 			<div class="card">
 				<div class="card-head">
 					 <div class="no-margin">
-						<div class="col-s3">
-							<button onclick="prev_year()" class="btn-arr"><i class="material-icons">fast_rewind</i></button>
-							<button onclick="prev()" class="btn-arr"><i class="material-icons">chevron_left</i></button>
-						</div>
-						<div class="col-s6">
-							<span class="card-title"><span id="month">Desember</span> <span id="year">2021</span></span>
-						</div>
-						<div class="col-s3">
-							<button onclick="next()" class="btn-arr"><i class="material-icons">chevron_right</i></button>
-							<button onclick="next_year()" class="btn-arr"><i class="material-icons">fast_forward</i></button>
-						</div>
+						<div class="col-s3"><button onclick="prev()" class="btn-arr"><i class="material-icons">chevron_left</i></button></div>
+						<div class="col-s6"><span class="card-title"><span id="month">Januari</span> <span id="year">2022</span></span></div>
+						<div class="col-s3"><button onclick="next()" class="btn-arr"><i class="material-icons">chevron_right</i></button></div>
 					</div>
 				</div>
-				<div id="setbulan"></div>
-				<div class="card-content" style="overflow:auto">
 					<div id="calendar" class="calendar-java" style="display: block;">
-
+						<div id="setbulan">28 Jumadilawal 1955 Ja - 28 Jumadilakir 1955 Ja</div>
 						<table class="cal_table tbl-hijr" border="1">
 						  <tbody>
 							<tr class="row-days">
@@ -222,116 +213,99 @@ $('#year').text(g_year);
 								<th class="day">Rab</th>
 								<th class="day">Kam</th> 
 								<th class="day" style="color: #4caf50;">Jum</th>
-								<th class="day">Sab</th>
+								<th class="day">Sab</th>  		
 							</tr>
 							<tr class="row-0">
-								<td onclick="detail(this)" class="col-0"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">1</p><p class="h-date">٢٦</p><span class="det">Masehi : 1 Desember 2021;Hijriyah : 26 Rabiul akhir 1443 H;Pasaran : Rabu Legi;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">2</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٧</p><span class="det">Masehi : 2 Desember 2021;Hijriyah : 27 Rabiul akhir 1443 H;Pasaran : Kamis Pahing;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">3</p><p class="h-date">٢٨</p><span class="det">Masehi : 3 Desember 2021;Hijriyah : 28 Rabiul akhir 1443 H;Pasaran : Jumat Pon;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">4</p><p class="h-date">٢٩</p><span class="det">Masehi : 4 Desember 2021;Hijriyah : 29 Rabiul akhir 1443 H;Pasaran : Sabtu Wage;</span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date" style="color: rgb(244, 67, 54);">1</p><p class="h-date">28 Pahing</p><span class="det">Masehi : 1 Januari 2022;Tanggal Jawa : 28 Jumadilawal 1955 Ja;Pasaran Jawa : Sabtu Pahing;Neptu : 18;Tahun Jawa : Alip;Tanggal Hijriyah : 28 Jumadil awal 1443 H;Tahun Baru Masehi;</span></td>
 							</tr>
 							<tr class="row-1">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">5</p><p class="h-date">١</p><span class="det">Masehi : 5 Desember 2021;Hijriyah : 1 Jumadil awal 1443 H;Pasaran : Minggu Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">6</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢</p><span class="det">Masehi : 6 Desember 2021;Hijriyah : 2 Jumadil awal 1443 H;Pasaran : Senin Legi;</span></td>
-								<td onclick="detail(this)" class="col-2" style="background-color: rgb(187, 222, 251);"><p class="m-date">7</p><p class="h-date">٣</p><span class="det">Masehi : 7 Desember 2021;Hijriyah : 3 Jumadil awal 1443 H;Pasaran : Selasa Pahing;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">8</p><p class="h-date">٤</p><span class="det">Masehi : 8 Desember 2021;Hijriyah : 4 Jumadil awal 1443 H;Pasaran : Rabu Pon;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">9</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٥</p><span class="det">Masehi : 9 Desember 2021;Hijriyah : 5 Jumadil awal 1443 H;Pasaran : Kamis Wage;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">10</p><p class="h-date">٦</p><span class="det">Masehi : 10 Desember 2021;Hijriyah : 6 Jumadil awal 1443 H;Pasaran : Jumat Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">11</p><p class="h-date">٧</p><span class="det">Masehi : 11 Desember 2021;Hijriyah : 7 Jumadil awal 1443 H;Pasaran : Sabtu Legi;</span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date">2</p><p class="h-date">29 Pon</p><span class="det">Masehi : 2 Januari 2022;Tanggal Jawa : 29 Jumadilawal 1955 Ja;Pasaran Jawa : Minggu Pon;Neptu : 12;Tahun Jawa : Alip;Tanggal Hijriyah : 29 Jumadil awal 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date">3</p><p class="h-date">30 Wage</p><span class="det">Masehi : 3 Januari 2022;Tanggal Jawa : 30 Jumadilawal 1955 Ja;Pasaran Jawa : Senin Wage;Neptu : 8;Tahun Jawa : Alip;Tanggal Hijriyah : 30 Jumadil awal 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date">4</p><p class="h-date">1 Kliwon</p><span class="det">Masehi : 4 Januari 2022;Tanggal Jawa : 1 Jumadilakir 1955 Ja;Pasaran Jawa : Selasa Kliwon;Neptu : 11;Tahun Jawa : Alip;Tanggal Hijriyah : 1 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date">5</p><p class="h-date">2 Legi</p><span class="det">Masehi : 5 Januari 2022;Tanggal Jawa : 2 Jumadilakir 1955 Ja;Pasaran Jawa : Rabu Legi;Neptu : 12;Tahun Jawa : Alip;Tanggal Hijriyah : 2 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date">6</p><p class="h-date">3 Pahing</p><span class="det">Masehi : 6 Januari 2022;Tanggal Jawa : 3 Jumadilakir 1955 Ja;Pasaran Jawa : Kamis Pahing;Neptu : 17;Tahun Jawa : Alip;Tanggal Hijriyah : 3 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date">7</p><p class="h-date">4 Pon</p><span class="det">Masehi : 7 Januari 2022;Tanggal Jawa : 4 Jumadilakir 1955 Ja;Pasaran Jawa : Jumat Pon;Neptu : 13;Tahun Jawa : Alip;Tanggal Hijriyah : 4 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date">8</p><p class="h-date">5 Wage</p><span class="det">Masehi : 8 Januari 2022;Tanggal Jawa : 5 Jumadilakir 1955 Ja;Pasaran Jawa : Sabtu Wage;Neptu : 13;Tahun Jawa : Alip;Tanggal Hijriyah : 5 Jumadil akhir 1443 H;</span></td>
 							</tr>
 							<tr class="row-2">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">12</p><p class="h-date">٨</p><span class="det">Masehi : 12 Desember 2021;Hijriyah : 8 Jumadil awal 1443 H;Pasaran : Minggu Pahing;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">13</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٩</p><span class="det">Masehi : 13 Desember 2021;Hijriyah : 9 Jumadil awal 1443 H;Pasaran : Senin Pon;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">14</p><p class="h-date">١۰</p><span class="det">Masehi : 14 Desember 2021;Hijriyah : 10 Jumadil awal 1443 H;Pasaran : Selasa Wage;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">15</p><p class="h-date">١١</p><span class="det">Masehi : 15 Desember 2021;Hijriyah : 11 Jumadil awal 1443 H;Pasaran : Rabu Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">16</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٢</p><span class="det">Masehi : 16 Desember 2021;Hijriyah : 12 Jumadil awal 1443 H;Pasaran : Kamis Legi;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">17</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٣</p><span class="det">Masehi : 17 Desember 2021;Hijriyah : 13 Jumadil awal 1443 H;Pasaran : Jumat Pahing;Puasa Ayyamul Bidh 13 Jumadil awal 1443;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date">18</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٤</p><span class="det">Masehi : 18 Desember 2021;Hijriyah : 14 Jumadil awal 1443 H;Pasaran : Sabtu Pon;Puasa Ayyamul Bidh 14 Jumadil awal 1443;</span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date">9</p><p class="h-date">6 Kliwon</p><span class="det">Masehi : 9 Januari 2022;Tanggal Jawa : 6 Jumadilakir 1955 Ja;Pasaran Jawa : Minggu Kliwon;Neptu : 13;Tahun Jawa : Alip;Tanggal Hijriyah : 6 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date">10</p><p class="h-date">7 Legi</p><span class="det">Masehi : 10 Januari 2022;Tanggal Jawa : 7 Jumadilakir 1955 Ja;Pasaran Jawa : Senin Legi;Neptu : 9;Tahun Jawa : Alip;Tanggal Hijriyah : 7 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date">11</p><p class="h-date">8 Pahing</p><span class="det">Masehi : 11 Januari 2022;Tanggal Jawa : 8 Jumadilakir 1955 Ja;Pasaran Jawa : Selasa Pahing;Neptu : 12;Tahun Jawa : Alip;Tanggal Hijriyah : 8 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date">12</p><p class="h-date">9 Pon</p><span class="det">Masehi : 12 Januari 2022;Tanggal Jawa : 9 Jumadilakir 1955 Ja;Pasaran Jawa : Rabu Pon;Neptu : 14;Tahun Jawa : Alip;Tanggal Hijriyah : 9 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date">13</p><p class="h-date">10 Wage</p><span class="det">Masehi : 13 Januari 2022;Tanggal Jawa : 10 Jumadilakir 1955 Ja;Pasaran Jawa : Kamis Wage;Neptu : 12;Tahun Jawa : Alip;Tanggal Hijriyah : 10 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date">14</p><p class="h-date">11 Kliwon</p><span class="det">Masehi : 14 Januari 2022;Tanggal Jawa : 11 Jumadilakir 1955 Ja;Pasaran Jawa : Jumat Kliwon;Neptu : 14;Tahun Jawa : Alip;Tanggal Hijriyah : 11 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date">15</p><p class="h-date">12 Legi</p><span class="det">Masehi : 15 Januari 2022;Tanggal Jawa : 12 Jumadilakir 1955 Ja;Pasaran Jawa : Sabtu Legi;Neptu : 14;Tahun Jawa : Alip;Tanggal Hijriyah : 12 Jumadil akhir 1443 H;</span></td>
 							</tr>
 							<tr class="row-3">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">19</p><p class="h-date" style="border-top: 2px solid rgb(103, 58, 183);">١٥</p><span class="det">Masehi : 19 Desember 2021;Hijriyah : 15 Jumadil awal 1443 H;Pasaran : Minggu Wage;Puasa Ayyamul Bidh 15 Jumadil awal 1443;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">20</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٦</p><span class="det">Masehi : 20 Desember 2021;Hijriyah : 16 Jumadil awal 1443 H;Pasaran : Senin Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">21</p><p class="h-date">١٧</p><span class="det">Masehi : 21 Desember 2021;Hijriyah : 17 Jumadil awal 1443 H;Pasaran : Selasa Legi;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">22</p><p class="h-date">١٨</p><span class="det">Masehi : 22 Desember 2021;Hijriyah : 18 Jumadil awal 1443 H;Pasaran : Rabu Pahing;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">23</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">١٩</p><span class="det">Masehi : 23 Desember 2021;Hijriyah : 19 Jumadil awal 1443 H;Pasaran : Kamis Pon;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">24</p><p class="h-date">٢۰</p><span class="det">Masehi : 24 Desember 2021;Hijriyah : 20 Jumadil awal 1443 H;Pasaran : Jumat Wage;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date" style="color: rgb(244, 67, 54);">25</p><p class="h-date">٢١</p><span class="det">Masehi : 25 Desember 2021;Hijriyah : 21 Jumadil awal 1443 H;Pasaran : Sabtu Kliwon;Hari Raya Natal;</span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date">16</p><p class="h-date">13 Pahing</p><span class="det">Masehi : 16 Januari 2022;Tanggal Jawa : 13 Jumadilakir 1955 Ja;Pasaran Jawa : Minggu Pahing;Neptu : 14;Tahun Jawa : Alip;Tanggal Hijriyah : 13 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date">17</p><p class="h-date">14 Pon</p><span class="det">Masehi : 17 Januari 2022;Tanggal Jawa : 14 Jumadilakir 1955 Ja;Pasaran Jawa : Senin Pon;Neptu : 11;Tahun Jawa : Alip;Tanggal Hijriyah : 14 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date">18</p><p class="h-date">15 Wage</p><span class="det">Masehi : 18 Januari 2022;Tanggal Jawa : 15 Jumadilakir 1955 Ja;Pasaran Jawa : Selasa Wage;Neptu : 7;Tahun Jawa : Alip;Tanggal Hijriyah : 15 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date">19</p><p class="h-date">16 Kliwon</p><span class="det">Masehi : 19 Januari 2022;Tanggal Jawa : 16 Jumadilakir 1955 Ja;Pasaran Jawa : Rabu Kliwon;Neptu : 15;Tahun Jawa : Alip;Tanggal Hijriyah : 16 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date">20</p><p class="h-date">17 Legi</p><span class="det">Masehi : 20 Januari 2022;Tanggal Jawa : 17 Jumadilakir 1955 Ja;Pasaran Jawa : Kamis Legi;Neptu : 13;Tahun Jawa : Alip;Tanggal Hijriyah : 17 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date">21</p><p class="h-date">18 Pahing</p><span class="det">Masehi : 21 Januari 2022;Tanggal Jawa : 18 Jumadilakir 1955 Ja;Pasaran Jawa : Jumat Pahing;Neptu : 15;Tahun Jawa : Alip;Tanggal Hijriyah : 18 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date" style="">22</p><p class="h-date">19 Pon</p><span class="det">Masehi : 22 Januari 2022;Tanggal Jawa : 19 Jumadilakir 1955 Ja;Pasaran Jawa : Sabtu Pon;Neptu : 16;Tahun Jawa : Alip;Tanggal Hijriyah : 19 Jumadil akhir 1443 H;</span></td>
 							</tr>
 							<tr class="row-4">
-								<td onclick="detail(this)" class="col-0"><p class="m-date">26</p><p class="h-date">٢٢</p><span class="det">Masehi : 26 Desember 2021;Hijriyah : 22 Jumadil awal 1443 H;Pasaran : Minggu Legi;</span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date">27</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٣</p><span class="det">Masehi : 27 Desember 2021;Hijriyah : 23 Jumadil awal 1443 H;Pasaran : Senin Pahing;</span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date">28</p><p class="h-date">٢٤</p><span class="det">Masehi : 28 Desember 2021;Hijriyah : 24 Jumadil awal 1443 H;Pasaran : Selasa Pon;</span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date">29</p><p class="h-date">٢٥</p><span class="det">Masehi : 29 Desember 2021;Hijriyah : 25 Jumadil awal 1443 H;Pasaran : Rabu Wage;</span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date">30</p><p class="h-date" style="border-top: 2px solid rgb(255, 152, 0);">٢٦</p><span class="det">Masehi : 30 Desember 2021;Hijriyah : 26 Jumadil awal 1443 H;Pasaran : Kamis Kliwon;</span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date">31</p><p class="h-date">٢٧</p><span class="det">Masehi : 31 Desember 2021;Hijriyah : 27 Jumadil awal 1443 H;Pasaran : Jumat Legi;</span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date">23</p><p class="h-date">20 Wage</p><span class="det">Masehi : 23 Januari 2022;Tanggal Jawa : 20 Jumadilakir 1955 Ja;Pasaran Jawa : Minggu Wage;Neptu : 9;Tahun Jawa : Alip;Tanggal Hijriyah : 20 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date">24</p><p class="h-date">21 Kliwon</p><span class="det">Masehi : 24 Januari 2022;Tanggal Jawa : 21 Jumadilakir 1955 Ja;Pasaran Jawa : Senin Kliwon;Neptu : 12;Tahun Jawa : Alip;Tanggal Hijriyah : 21 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date">25</p><p class="h-date">22 Legi</p><span class="det">Masehi : 25 Januari 2022;Tanggal Jawa : 22 Jumadilakir 1955 Ja;Pasaran Jawa : Selasa Legi;Neptu : 8;Tahun Jawa : Alip;Tanggal Hijriyah : 22 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date">26</p><p class="h-date">23 Pahing</p><span class="det">Masehi : 26 Januari 2022;Tanggal Jawa : 23 Jumadilakir 1955 Ja;Pasaran Jawa : Rabu Pahing;Neptu : 16;Tahun Jawa : Alip;Tanggal Hijriyah : 23 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date">27</p><p class="h-date">24 Pon</p><span class="det">Masehi : 27 Januari 2022;Tanggal Jawa : 24 Jumadilakir 1955 Ja;Pasaran Jawa : Kamis Pon;Neptu : 15;Tahun Jawa : Alip;Tanggal Hijriyah : 24 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date">28</p><p class="h-date">25 Wage</p><span class="det">Masehi : 28 Januari 2022;Tanggal Jawa : 25 Jumadilakir 1955 Ja;Pasaran Jawa : Jumat Wage;Neptu : 10;Tahun Jawa : Alip;Tanggal Hijriyah : 25 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date">29</p><p class="h-date">26 Kliwon</p><span class="det">Masehi : 29 Januari 2022;Tanggal Jawa : 26 Jumadilakir 1955 Ja;Pasaran Jawa : Sabtu Kliwon;Neptu : 17;Tahun Jawa : Alip;Tanggal Hijriyah : 26 Jumadil akhir 1443 H;</span></td>
 							</tr>
 							<tr class="row-5">
-								<td onclick="detail(this)" class="col-0"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-1"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-2"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-3"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-4"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-5"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
-								<td onclick="detail(this)" class="col-6"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-0" style="background: white none repeat scroll 0% 0%;"><p class="m-date">30</p><p class="h-date">27 Legi</p><span class="det">Masehi : 30 Januari 2022;Tanggal Jawa : 27 Jumadilakir 1955 Ja;Pasaran Jawa : Minggu Legi;Neptu : 10;Tahun Jawa : Alip;Tanggal Hijriyah : 27 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-1" style="background: white none repeat scroll 0% 0%;"><p class="m-date">31</p><p class="h-date">28 Pahing</p><span class="det">Masehi : 31 Januari 2022;Tanggal Jawa : 28 Jumadilakir 1955 Ja;Pasaran Jawa : Senin Pahing;Neptu : 13;Tahun Jawa : Alip;Tanggal Hijriyah : 28 Jumadil akhir 1443 H;</span></td>
+								<td onclick="detail(this)" class="col-2" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-3" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-4" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-5" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
+								<td onclick="detail(this)" class="col-6" style="background: white none repeat scroll 0% 0%;"><p class="m-date"></p><p class="h-date"></p><span class="det"></span></td>
 							</tr>
 						  </tbody>
 						</table>
 					</div>
-				</div>
 				<div class="card-tabs">
 					Hari Libur
 				</div>
 				<div>
 					<div id="harilibur">
 						<ul class="collection">
-						<li class="collection-item"><span class="title">25 Desember : Hari Raya Natal</span><a href="#!" class="secondary-content"></a></li></ul>
-					</div>
-				</div>
-				<div class="card-tabs">
-					Indikator Warna Puasa
-				</div>
-				<div>
-					<div id="puasa">
-						<ul class="collection">
-							<li class="collection-item"><span style="background:#ff9800">&nbsp;&nbsp;&nbsp;</span> Puasa Senin Kamis</li>
-							<li class="collection-item"><span style="background:#673ab7">&nbsp;&nbsp;&nbsp;</span> Puasa Ayyamul Bidh, tiga hari tiap pertengahan bulan hijriah (13, 14, 15)</li>
-							<li class="collection-item"><span style="background:#76ff03">&nbsp;&nbsp;&nbsp;</span> Puasa Ramadan</li>
-							<li class="collection-item"><span style="background:#64b5f6">&nbsp;&nbsp;&nbsp;</span> Puasa Arafah, tiap 9 dzulhijjah (bagi yang tidak menunaikan haji)</li>
-							<li class="collection-item"><span style="background:#f06292">&nbsp;&nbsp;&nbsp;</span> Puasa 'Asyura dan Tasu'a, tiap 10 muharram dan satu hari sebelum atau sesudahnya</li>
-							<li class="collection-item"><span style="background:#b71c1c">&nbsp;&nbsp;&nbsp;</span> Haram Berpuasa. Idul fitri, idul adha dan hari tasyrik (11, 12, 13 dzulhijjah)</li>
-						</ul>
+						<li class="collection-item"><span class="title">1 Januari : Tahun Baru Masehi</span><a href="#!" class="secondary-content"></a></li></ul>
 					</div>
 				</div>
 				
 			</div>
+		</div>
 	</div>
-	
-		<div class="kalender">
-			<div class="card">
+	  
+	  
+	  
+	  
+	  
+	  <div class="card">
 				<div class="card-head">
-					<span>Loncat ke</span>
+					<span>Loncat ke tahun</span>
 				</div>
 				<div class="no-margin">
-					<div class="col-s6">
-						<select id="list-month" style="display:initial">
-						<option value="0">Januari</option><option value="1">Februari</option><option value="2">Maret</option><option value="3">April</option><option value="4">Mei</option><option value="5">Juni</option><option value="6">Juli</option><option value="7">Agustus</option><option value="8">September</option><option value="9">Oktober</option><option value="10">November</option><option value="11">Desember</option></select>
-					</div>
-					<div class="col-s4">
+					<div class="col-s8">
 						<select id="list-year" style="display:initial">
-						<option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option><option value="2041">2041</option><option value="2042">2042</option><option value="2043">2043</option><option value="2044">2044</option><option value="2045">2045</option><option value="2046">2046</option><option value="2047">2047</option><option value="2048">2048</option><option value="2049">2049</option><option value="2050">2050</option></select>
+							<option value="" disabled="" selected="">Pilih Tahun</option>
+						<option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option><option value="2041">2041</option><option value="2042">2042</option><option value="2043">2043</option><option value="2044">2044</option><option value="2045">2045</option><option value="2046">2046</option><option value="2047">2047</option><option value="2048">2048</option><option value="2049">2049</option><option value="2050">2050</option></select>
 					</div>
 					<div class="col-s4"> 
 						<button id="go_year" class="waves-effect waves-light btn deep-orange">GO</button>
 					</div>
 				</div>
 			</div>
-		</div>
-			
-			<div id="sc">Developed by <a href="#">kts</a></div>
+	  
 
 <!-- Modal Structure -->
 <div id="myModal" class="modal">
